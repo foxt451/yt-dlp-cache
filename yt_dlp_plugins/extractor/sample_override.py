@@ -5,7 +5,7 @@ from yt_dlp.extractor.youtube import YoutubeIE
 
 
 
-class _SampleOverridePluginIE(YoutubeIE, plugin_name='sample'):
+class SampleOverridePluginIE(YoutubeIE, plugin_name='sample'):
     def _real_extract(self, url):
-        self.to_screen('Passing through SampleOverridePluginIE')
+        return 1
         return super()._real_extract(url)
